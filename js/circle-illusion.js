@@ -25,9 +25,9 @@ const renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth,window.innerHeight*0.6);
 document.getElementById("canvas").appendChild(renderer.domElement)
 
-const o_geometry = new THREE.CircleGeometry (9.25, 512);
+const o_geometry = new THREE.CircleGeometry (9.5, 512);
 const o_material = new THREE.MeshBasicMaterial ({color:0x375A7F});
-const i_geometry = new THREE.CircleGeometry (0.75, 128);
+const i_geometry = new THREE.CircleGeometry (0.5, 128);
 const i_material = new THREE.MeshBasicMaterial ({color:0xffffff});
 
 const circle = new THREE.Mesh(o_geometry, o_material);
@@ -36,7 +36,7 @@ scene.add(circle);
 pivot = new THREE.Group();
 pivot.position.set(0, 0, 0);
 centre = new THREE.Group();
-centre.position.set(4,0,0);
+centre.position.set(4.5,0,0);
 pivot.add(centre);
 scene.add( pivot );
 
@@ -50,15 +50,15 @@ function init (n){
     for(let i = 1; i <= n; i++){
         let vertex = new THREE.Mesh(i_geometry, i_material);
         centre.add(vertex);
-        vertex.position.set(4.25*Math.cos(2*i*Math.PI/n),4.25*Math.sin(2*i*Math.PI/n),0);
+        vertex.position.set(4.5*Math.cos(2*i*Math.PI/n),4.5*Math.sin(2*i*Math.PI/n),0);
     }
 
     lines.remove(...lines.children);
 
     for(let i = 1; i <= n; i++){
         let points = [];
-        points.push( new THREE.Vector3(9.25*Math.cos(i*Math.PI/n), 9.25*Math.sin(i*Math.PI/n), 0 ) );
-        points.push( new THREE.Vector3(-9.25*Math.cos(i*Math.PI/n), -9.25*Math.sin(i*Math.PI/n), 0 ) );
+        points.push( new THREE.Vector3(9.5*Math.cos(i*Math.PI/n), 9.5*Math.sin(i*Math.PI/n), 0 ) );
+        points.push( new THREE.Vector3(-9.5*Math.cos(i*Math.PI/n), -9.5*Math.sin(i*Math.PI/n), 0 ) );
         let geometry = new THREE.BufferGeometry().setFromPoints( points );
         let line = new THREE.Line( geometry, l_material );
         lines.add( line );

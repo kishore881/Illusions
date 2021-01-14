@@ -20,7 +20,7 @@ var state = {base:0.004,yincr:0.004};
         renderer.setSize(window.innerWidth, window.innerHeight*0.6);
         document.getElementById('canvas').appendChild(renderer.domElement);
 
-        const camera = new THREE.OrthographicCamera( window.innerWidth / - 10, window.innerWidth / 10, window.innerHeight*0.6 / 10, window.innerHeight*0.6 / - 10,  window.innerWidth / - 10,  window.innerWidth*0.6 / 10 );
+        const camera = new THREE.OrthographicCamera( window.innerWidth / - 10, window.innerWidth / 10, window.innerHeight*0.6 / 10, window.innerHeight*0.6 / - 10,  window.innerWidth / - 10,  window.innerWidth / 10 );
 
         
         const ambientLight = new THREE.AmbientLight();
