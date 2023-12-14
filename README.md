@@ -1,2 +1,2 @@
 # Illusions
-Couple of optical illusions modeled in 3D using SketchUp and displaed using three.js
+Optical illusions modeled using SketchUp and displayed in browser using three.js
