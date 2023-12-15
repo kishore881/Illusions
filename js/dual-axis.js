@@ -76,3 +76,5 @@ var state = {base:0.004,yincr:0.004};
         document.getElementById('speed').addEventListener('change', function (event){
             state.yincr = state.base*event.target.value/4;
         },false);
+
+        onWindowResize();

@@ -5,7 +5,7 @@ function onWindowResize () {
     renderer.setSize( window.innerWidth, window.innerHeight*0.7 );
 }
 
-var state = {base:0.075,yincr:0.075};
+var state = {base:0.02,yincr:0.02};
 
 const scene = new THREE.Scene();
 scene.background = new THREE.Color( 0x222222 );
